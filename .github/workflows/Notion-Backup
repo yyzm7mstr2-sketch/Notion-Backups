@@ -19,3 +19,4 @@ jobs: backup: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/check
       name: notion-backup
       path: notion-backup.json
       retention-days: 90
+ 
