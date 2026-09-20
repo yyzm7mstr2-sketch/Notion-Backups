@@ -1,4 +1,4 @@
-Notion Backup on: schedule: - cron: “0 2 1 * *” workflow_dispatch:
+Notion Backup on: workflow_dispatch
 jobs: backup: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v4
 - name: Backup Notion
     run: |
