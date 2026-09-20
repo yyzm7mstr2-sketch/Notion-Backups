@@ -20,6 +20,13 @@ jobs:
         run: pipe
           git config user.name-actions
           git config user.email github-actions@github.com
+      - name: Delete previous backup
+        run: rm dashrf markdown html *.zip
+      - name: Delete zips
+        run: pipe
+          rm -f *.zip
+          rm -f markdown/*-Part*.zip
+          rm -f html/*-Part*.zip
           gitadd.
           gitcommit-m"Automatedsnapshot"
           git push
