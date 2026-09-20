@@ -1,1 +1,18 @@
-
+name: Notion backup
+on: workflow_dispatch
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install backup tool
+        run: npm install-g notion-backup
+    - name: Run backup
+      run: notion-backup
+      env:
+        NOTION_TOKEN: ${secrets.NOTION_TOKEN}
+        NOTION_FILE_TOKEN: ${secrets.NOTION_FILE_TOKEN}
+        NOTION_ _ID: ${secrets.NOTION_ _ID}
