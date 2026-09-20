@@ -2,7 +2,7 @@ name: Notion backup
 on:
   workflow_dispatch:
 jobs:
-  backup:
+backup:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,17 +17,17 @@ jobs:
         NOTION_TOKEN: ${secrets.NOTION_TOKEN}
         NOTION_FILE_TOKEN: ${secrets.NOTION_FILE_TOKEN}
         NOTION_ _ID: ${secrets.NOTION_ _ID}
+        NODE-OPTIONS: "--max-http-header-size 15000"
       - name: Commit changes
-        run: pipe
+        git commit-"Automated snapshot"
+        git push
+        run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
       - name: Delete previous backup
         run: rm dashrf markdown html *.zip
       - name: Delete zips
-        run: pipe
+        run: |
           rm -f *.zip
           rm -f markdown/*-Part*.zip
           rm -f html/*-Part*.zip
-          gitadd.
-          gitcommit-m"Automatedsnapshot"
-          git push
