@@ -1,4 +1,5 @@
-Notion Backup on: workflow_dispatch
+Notion Backup
+on: workflow_dispatch
 jobs:
 backup:
 - name: Backup Notion
