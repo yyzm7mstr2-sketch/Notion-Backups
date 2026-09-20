@@ -1,10 +1,1 @@
-name: Notion Backup
-on: workflow_dispatch
-jobs:
-  backup:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Backup Notion
-      - uses: notionhq/client-action@v1
-      - env:
-        NOTION-TOKEN: ${
+
