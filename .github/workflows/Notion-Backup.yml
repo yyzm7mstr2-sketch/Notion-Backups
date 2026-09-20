@@ -18,7 +18,7 @@ jobs:
         NOTION_ _ID: ${secrets.NOTION_ _ID}
       - name: Commit changes
         run: pipe
-          git config user.name-actions
+          git config user.name github-actions
           git config user.email github-actions@github.com
       - name: Delete previous backup
         run: rm dashrf markdown html *.zip
