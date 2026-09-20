@@ -1,5 +1,6 @@
 Notion Backup on: workflow_dispatch
-jobs: backup: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v4
+jobs:
+backup:
 - name: Backup Notion
     run: |
       npm install -g @notionhq/client
